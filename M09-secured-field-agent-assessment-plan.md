@@ -7,12 +7,12 @@ _TODO_ Add time estimates to each of the top-level tasks
 
 ### Part 0: Set Up and Planning
 
-* [ ] Create a new GitHub repo for this assessment or continue working in the repo from last week's React Field Agent repository (#.# hours)
-  * [ ] **When creating your repo, be sure to add a `.gitignore` file using the GitHub Node template**
-  * [ ] Update the README with the contents from this file
-  * [ ] If not done, add the instruction team as collaborators
+* [x] Create a new GitHub repo for this assessment or continue working in the repo from last week's React Field Agent repository (0.25 hours)
+  * [x] **When creating your repo, be sure to add a `.gitignore` file using the GitHub Node template**
+  *[x] Update the README with the contents from this file
+  * [x] If not done, add the instruction team as collaborators
 
-* [ ] Create a new branch for all work on the assessment
+* [x] Create a new branch for all work on the assessment
   * From within the local repo, create the branch by running the command `git checkout -b assessment-work` (this command creates a branch named `assessment-work` and makes the new branch the active branch)
   * Push the branch to the remote repo by running the command `git push --set-upstream origin assessment-work`
   * _Now just stay on the `assessment-work` branch and use the normal git workflow:_
@@ -23,12 +23,12 @@ _TODO_ Add time estimates to each of the top-level tasks
     * Run `git push` to push changes to the remote repo
     * Rinse and repeat!
 
-* [ ] Download the starter project for this assessment and add the files to your repo
+* [x] Download the starter project for this assessment and add the files to your repo
   * **See your instruction team for the correct files to use!**
 
-* [ ] Review the requirements (#.# hours)
+* [x] Review the requirements (0.5 hours)
 
-* [ ] Identify any research that I need to do (#.# hours)
+* [ ] Identify any research that I need to do (0.5 hours)
 
 ---
 
@@ -38,86 +38,87 @@ _Note: The following sequence of tasks is focused on keeping refactoring to a mi
 
 _Use the SQL script included in the starter code to create your database and the initial data_
 
-* [ ] Create the AuthController with an endpoint for authenticating users (#.# hours)
+* [x] Create the AuthController with an endpoint for authenticating users (1.0 hours)
 
-* [ ] Update the security configuration ant matchers to allow anonymous requests to the AuthController endpoint for authenticating users (#.# hours)
+* [x] Update the security configuration ant matchers to allow anonymous requests to the AuthController endpoint for authenticating users (0.5 hours)
+  - will give user the permission to only make get request whereas admin can make all 4. 
 
 **Make sure that my GitHub repo is updated (i.e. push all commits to my local feature branch to the remote repo)!**
 
 ### Part 2: Client-Side Routes
 
-* [ ] Implement the required client-side routes (#.# hours)
-  * [ ] Install `react-router-dom`
-  * [ ] Define the necessary client-side routes (see the list of routes below)
-  * [ ] Stub out any components that are needed to support the client-side routes
+* [x] Implement the required client-side routes (0.5 hours)
+  * [x] Install `react-router-dom`
+  * [x] Define the necessary client-side routes (see the list of routes below)
+  * [x] Stub out any components that are needed to support the client-side routes
     * _Note: Stub out the individual Agents CRUD UI components but hold off on moving any code from last week's monolithic Agents CRUD UI component to the individual components_
-  * [ ] Display a "Not Found" message if a route doesn't match one of the defined routes
+  * [x] Display a "Not Found" message if a route doesn't match one of the defined routes
 
 **Make sure that my GitHub repo is updated (i.e. push all commits to my local feature branch to the remote repo)!**
 
 ### Part 3: User Login
 
-* [ ] Create a "Login" component (#.# hours)
-  * [ ] Add a form with "Username" and "Password" fields
-  * [ ] Use `fetch` to `POST` the user's information to the User API
-  * [ ] Use an existing user's information to test that the API returns an auth token
+* [ x Create a "Login" component (1.0 hours)
+  * [x] Add a form with "Username" and "Password" fields
+  * [x] Use `fetch` to `POST` the user's information to the User API
+  * [x] Use an existing user's information to test that the API returns an auth token
 
-* [ ] Add the necessary user state and helper functions to the App component (#.# hours)
-  * [ ] Add a state variable to track the current user
-  * [ ] Add a function to login a user
-  * [ ] Add a function to logout a user
-  * [ ] Collect the user state variable along with the login/logout helper functions into a single `auth` object
+* [x] Add the necessary user state and helper functions to the App component (1.0 hours)
+  * [x] Add a state variable to track the current user
+  * [x] Add a function to login a user
+  * [x] Add a function to logout a user
+  * [x] Collect the user state variable along with the login/logout helper functions into a single `auth` object
 
-* [ ] Create a React context to track user auth (#.# hours)
-  * [ ] Create the context in its own module
-  * [ ] Update the App component to provide the context to the entire app
-  * [ ] Set the context's `value` to the `auth` object
+* [x] Create a React context to track user auth (0.5 hours)
+  * [x] Create the context in its own module
+  * [x] Update the App component to provide the context to the entire app
+  * [x] Set the context's `value` to the `auth` object
 
-* [ ] Update the "Login" component (#.# hours)
-  * [ ] Consume the user auth context
-  * [ ] After a successful `POST` to the User API, call the auth context's login function and pass in the auth token and redirect the user to the "Home" route
+* [x] Update the "Login" component (1.0 hours)
+  * [x] Consume the user auth context
+  * [x] After a successful `POST` to the User API, call the auth context's login function and pass in the auth token and redirect the user to the "Home" route
 
-* [ ] Update the header/navbar component (#.# hours)
-  * [ ] Consume the user auth context
-  * [ ] When there's a logged in user, display the user's username and "Logout" button
-  * [ ] When there's not a logged in user, display links for the "Login" and "Register" routes
-  * [ ] When the "Logout" button is clicked, call the auth context's logout function
+* [x] Update the header/navbar component (1.0 hours)
+  * [x] Consume the user auth context
+  * [x] When there's a logged in user, display the user's username and "Logout" button
+  * [x] When there's not a logged in user, display links for the "Login" and "Register" routes
+  * [x] When the "Logout" button is clicked, call the auth context's logout function
 
-* [ ] Protect each of the agent related routes (#.# hours)
-  * [ ] When there's a logged in user, display the route's associated component
-  * [ ] When there's not a logged in user, redirect the user to the login route
+* [x] Protect each of the agent related routes (0.5 hours)
+  * [x] When there's a logged in user, display the route's associated component
+  * [x] When there's not a logged in user, redirect the user to the login route
 
 **Make sure that my GitHub repo is updated (i.e. push all commits to my local feature branch to the remote repo)!**
 
 ### Part 4: Agents CRUD UI Component Refactoring
 
-* [ ] Update the "Agents" component (#.# hours)
-  * [ ] Update the "Add Agent" button to redirect the user to the "Add Agent" route (if not already completed)
-  * [ ] Update the individual agent "Edit" and "Delete" buttons to redirect the user to the appropriate routes (if not already implemented)
+* [x] Update the "Agents" component (0.5 hours)
+  * [x] Update the "Add Agent" button to redirect the user to the "Add Agent" route (if not already completed)
+  * [x] Update the individual agent "Edit" and "Delete" buttons to redirect the user to the appropriate routes (if not already implemented)
 
-* [ ] Update the "Add Agent" component (#.# hours)
-  * [ ] Move code from the "Agents" component into the "Add Agent" component
-  * [ ] After a successful `POST` to the Field Agent API, redirect the user to the "Agents" route
+* [x] Update the "Add Agent" component (0.5 hours)
+  * [x] Move code from the "Agents" component into the "Add Agent" component
+  * [x] After a successful `POST` to the Field Agent API, redirect the user to the "Agents" route
 
-* [ ] Update the "Edit Agent" component (#.# hours)
-  * [ ] Move code from the "Agents" component into the "Edit Agent" component
-  * [ ] Use the `useParams` hook to get the agent's ID from the route
-  * [ ] Use `fetch` to `GET` the agent from the Field Agent API when the component is first loaded
-  * [ ] After a successful `PUT` to the Field Agent API, redirect the user to the "Agents" route
+* [x] Update the "Edit Agent" component (1.5 hours)
+  * [x] Move code from the "Agents" component into the "Edit Agent" component
+  * [x] Use the `useParams` hook to get the agent's ID from the route
+  * [x] Use `fetch` to `GET` the agent from the Field Agent API when the component is first loaded
+  * [x] After a successful `PUT` to the Field Agent API, redirect the user to the "Agents" route
 
-* [ ] Update the "Delete Agent" component (if needed) (#.# hours)
-  * [ ] Move code from the "Agents" component into the "Delete Agent" component
-  * [ ] Use the `useParams` hook to get the agent's ID from the route
-  * [ ] Use `fetch` to `GET` the agent from the Field Agent API when the component is first loaded
-  * [ ] After a successful `DELETE` from the Field Agent API, redirect the user to the "Agents" route
+* [x] Update the "Delete Agent" component (if needed) (1.0 hours)
+  * [x] Move code from the "Agents" component into the "Delete Agent" component
+  * [x] Use the `useParams` hook to get the agent's ID from the route
+  * [x] Use `fetch` to `GET` the agent from the Field Agent API when the component is first loaded
+  * [x] After a successful `DELETE` from the Field Agent API, redirect the user to the "Agents" route
 
 **Make sure that my GitHub repo is updated (i.e. push all commits to my local feature branch to the remote repo)!**
 
 ### Part 5: Testing and Project Submission
 
-* [ ] Use the provided test plan to manually test the application (#.# hours)
+* [x] Use the provided test plan to manually test the application (0.5 hours)
 
-* [ ] Create a pull request in GitHub to facilitate code review (#.# hours)
+* [x] Create a pull request in GitHub to facilitate code review (0.05 hours)
 
 ---
 

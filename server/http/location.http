@@ -1,0 +1,21 @@
+@url = http://localhost:8080/api/location
+@token = eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJidWctc2FmYXJpIiwic3ViIjoiam9obkBzbWl0aC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJleHAiOjE2Mzk3MTQ4OTZ9.SBDSFXdO8UkGsL7lKkQNU0cgBNdUkgRQjBF8GodI52M
+
+GET {{url}}/2 HTTP/1.1
+Authorization: Bearer {{token}}
+
+###
+
+POST {{url}} HTTP/1/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Safe House",
+    "address": "212 The Parkway",
+    "city": "Arkansaw",
+    "region": "WI",
+    "countryCode": "USA",
+    "postalCode": "55555",
+    "agencyId": 1
+}
