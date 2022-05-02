@@ -43,7 +43,7 @@ function App() {
       authManager.login(token);
     }
     setInit(true);
-  }, []);
+  }, [authManager]);
 
   return (
     <div className="App">

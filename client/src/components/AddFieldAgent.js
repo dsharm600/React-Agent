@@ -8,8 +8,8 @@ function AddFieldAgent() {
   const [firstName, setFirstName] = useState('');
   const [middleName, setMiddleName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [dob, setDob] = useState(new Date());
-  const [heightInInches, setHeightInInches] = useState(0);
+  const [dob, setDob] = useState('');
+  const [heightInInches, setHeightInInches] = useState('');
   const [errors, setErrors] = useState([]);
 
   const history = useHistory();

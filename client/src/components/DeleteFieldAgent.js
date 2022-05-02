@@ -7,7 +7,7 @@ function DeleteFieldAgent() {
   const [firstName, setFirstName] = useState('');
   const [middleName, setMiddleName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [dob, setDob] = useState(null);
+  const [dob, setDob] = useState('');
   const [heightInInches, setHeightInInches] = useState(0);
   const [init, setInit] = useState(false);
 
@@ -16,7 +16,7 @@ function DeleteFieldAgent() {
   const authManager = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/agent/${id}`)
+    fetch(`http://localhost:8080/api/agent/${id}`, {headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}})
       .then(response => {
         if (response.status === 200) {
           return response.json();
@@ -40,7 +40,7 @@ function DeleteFieldAgent() {
         }
       })
       .catch(err => console.error(err));
-  }, []);
+  }, [history, id]);
 
   const handleSubmit = () => {
 
