@@ -13,7 +13,7 @@ function FieldAgents() {
   const authManager = useContext(AuthContext);
 
   let getFieldAgent = () => {
-    return fetch('http://localhost:8080/api/agent')
+    return fetch('http://localhost:8080/api/agent', {headers: {Authorization: `Bearer ${localStorage.getItem('jwt_token')}`}})
       .then(response => {
         if (response.status === 200) {
           return response.json()

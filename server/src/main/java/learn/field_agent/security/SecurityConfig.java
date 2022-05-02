@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/authenticate").permitAll()
                 .antMatchers("/api/create_account").permitAll()
                 // all endpoints to protect go here
-                .antMatchers(HttpMethod.GET, "/api/agent", "/api/agent/*").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/agent", "/api/agent/*").hasAnyRole("USER", "ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/agent").hasAnyRole("USER", "ADMIN")
                 .antMatchers(HttpMethod.PUT, "/api/agent/*").hasAnyRole("USER", "ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/api/agent/*").hasAnyRole("ADMIN")
