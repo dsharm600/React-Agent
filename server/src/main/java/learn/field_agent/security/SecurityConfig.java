@@ -1,6 +1,7 @@
 package learn.field_agent.security;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -28,6 +29,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 // TODO add antMatchers here to configure access to specific API endpoints
+                .antMatchers("/api/authenticate").permitAll()
+                .antMatchers("/api/create_account").permitAll()
+                // all endpoints to protect go here
+                .antMatchers(HttpMethod.GET, "/api/agent", "/api/agent/*").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/agent").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.PUT, "/api/agent/*").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/api/agent/*").hasAnyRole("ADMIN")
                 // require authentication for any request...
                 .anyRequest().authenticated()
                 .and()
